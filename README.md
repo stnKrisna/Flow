@@ -143,7 +143,7 @@ Vector2 enemyDir;
 field.getDirection(0, (int)enemy.pos.x, (int)enemy.pos.y, &enemyDir.x, &enemyDir.y);
 
 // BYO vector math
-enemy.pos *= enemyDir;
+enemy.pos += enemy.speed * enemyDir;
 ```
 
 ## Inspiration
