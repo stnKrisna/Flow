@@ -13,10 +13,11 @@
 ## Documentation
 
 ## Features
-- **Data source agnostic** - Flow field can be created from any data source. See "[ASCII Map](#building-flow-field-from-ascii-map)" or "[One-way traffic](#one-way-traffic)" example.
+- **Data source agnostic** - Flow field can be created from any data source. You're in charge of any data to 2D grid conversion and we'll do the rest. See "[ASCII Map](#building-flow-field-from-ascii-map)" or "[One-way traffic](#one-way-traffic)" example.
 - **STL-like iteration** - See "[STL-like cell iteration](#stl-like-cell-iteration)" for example.
-- **Grid-based navigation** - See "[Grid-based navigation](#grid-based-navigation)" for example
-- **Vector-based navigation** - See "[Vector-based navigation](#vector-based-navigation)" for example
+- **Grid-based navigation** - See "[Grid-based navigation](#grid-based-navigation)" for example.
+- **Vector-based navigation** - See "[Vector-based navigation](#vector-based-navigation)" for example.
+- **Matrix/Vector library agnostic** - We don't care what math library you use. Just give us the address of the `X` & `Y` component, are you're good to go! See "[Grid-based navigation](#grid-based-navigation)" & "[Vector-based navigation](#vector-based-navigation)" for example.
 
 ## Planned features
 - **Serialization**
