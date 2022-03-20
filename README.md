@@ -93,6 +93,12 @@ for (auto cell = field.begin(); cell != field.end(); ++cell) {
       break;
   }
 }
+
+// Or use the "at" function to get a specific cell
+field.at(1, 0).setEntryDir(flow::Directions::NORTH |
+        flow::Directions::EAST |
+        flow::Directions::SOUTH |
+        flow::Directions::WEST);
 ```
 
 ### STL-like cell iteration
@@ -101,7 +107,7 @@ for (auto cell = field.begin(); cell != field.end(); ++cell) {
 for (auto itr = field.begin(); itr != field.end(); ++itr) {
   // Print the index of the iterator
   std::cout << itr.idx << std::endl;
-  
+
   // You can use the arrow operator (->) to access the cell
   itr->setEntryDir(flow::Directions::NORTH |
     flow::Directions::EAST |
@@ -127,9 +133,9 @@ for (auto cell : field) {
 if (enemy.position == enemy.desiredPos) {
   uint16_t newPos_x = 0;
   uint16_t newPos_y = 0;
-  
+
   field.getNextCell(0, (int)enemy.pos.x, (int)enemy.pos.y, &newPos_x, &newPos_y);
-  
+
   enemy.desiredPos.x = newPos_x;
   enemy.desiredPos.y = newPos_y;
 }

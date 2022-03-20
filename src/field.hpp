@@ -88,6 +88,16 @@ namespace flow {
         /// Get the next cell's coordinate from a coordinate point
         void getNextCell (size_t layer, DimensionType x, DimensionType y, DimensionType * nX, DimensionType * nY);
 
+        /// Get the next cell's coordinate from a coordinate point
+        inline CellType at (DimensionType x, DimensionType y) const {
+            return cells[vec2ToArrayIdx(x, y)];
+        }
+
+        /// Get the next cell's coordinate from a coordinate point
+        inline CellType& at (DimensionType x, DimensionType y) {
+            return cells[vec2ToArrayIdx(x, y)];
+        }
+
     private:
         DimensionType width;
         DimensionType height;

@@ -59,6 +59,12 @@ w........w";
         }
     }
 
+    // Access cell using the at function
+    field.at(1, 0).setEntryDir(flow::Directions::NORTH |
+            flow::Directions::EAST |
+            flow::Directions::SOUTH |
+            flow::Directions::WEST);
+
     // Add point of interests
     flow::Field::PointOfInterests poi1 = {
         {3, 7},
